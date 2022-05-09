@@ -1,0 +1,25 @@
+#container-paciente{
+    display: block;
+    height:115vh;
+}
+
+#formulario{
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.domicilio, .ubicacion{
+    display: flex;
+}
+
+h3{
+    padding-top: 15px;
+}
+
+label{
+    display:flex;
+}

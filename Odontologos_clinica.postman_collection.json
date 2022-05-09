@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "f8d606ac-381a-45ea-aa91-0a3bdde7eeeb",
+		"name": "Odontologos_clinica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pacientes",
+			"item": [
+				{
+					"name": "crearPaciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Perez\",\r\n    \"dni\": \"25897154\",\r\n    \"fechaIngreso\": \"2022-07-06\",\r\n    \"domicilio\": {\r\n        \"id\": 1,\r\n        \"calle\": \"Mendoza\",\r\n        \"numero\": \"985\",\r\n        \"localidad\": \"Córdoba\",\r\n        \"provincia\": \"Córdoba\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerPaciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pacientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarPaciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pacientes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarPaciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"flor\",\r\n    \"apellido\": \"fda\",\r\n    \"email\": \"barbi@gmail.com\",\r\n    \"dni\": 1234,\r\n    \"fechaIngreso\": \"2022-05-05T00:00:00.000+00:00\",\r\n    \"domicilio\": {\r\n        \"id\": 9,\r\n        \"calle\": \"falsa\",\r\n        \"numero\": \"12\",\r\n        \"localidad\": \"santa fe\",\r\n        \"provincia\": \"santa fe\"\r\n    },\r\n    \"odontologo\": {\r\n        \"id\": 9,\r\n        \"nombre\": \"flor\",\r\n        \"apellido\": \"das\",\r\n        \"matricula\": 323\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pacientes/actualizar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes",
+								"actualizar",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerTodosLosPacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "odontologo",
+			"item": [
+				{
+					"name": "crearOdontologo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"flor\",\r\n    \"apellido\": \"fidal\",\r\n    \"matricula\": 323\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/odontologos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odontologos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarOdontologo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/odontologos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odontologos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerTodosLosOdontologos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/odontologos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odontologos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarOdontologo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/odontologos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odontologos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarOdontologo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/odotologos/actualizar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"odotologos",
+								"actualizar",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "turnos",
+			"item": [
+				{
+					"name": "crearTurno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"paciente\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Juan\",\r\n        \"apellido\": \"Perez\",\r\n        \"dni\": \"25897154\",\r\n        \"fechaIngreso\": \"2022-04-03\",\r\n        \"domicilio\": {\r\n            \"id\": 1,\r\n            \"calle\": \"Mendoza\",\r\n            \"numero\": \"985\",\r\n            \"localidad\": \"Córdoba\",\r\n            \"provincia\": \"Córdoba\"\r\n        }\r\n    },\r\n    \"odontologo\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"flor\",\r\n        \"apellido\": \"fidal\",\r\n        \"matricula\": 323\r\n    },\r\n    \"date\": \"2022-04-03T21:50:35.486+00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/turnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turnos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarTodosTurnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/turnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turnos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarTurno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/turnos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turnos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarTurno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/turnos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"turnos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "ingresarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "sole",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ingresarAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "pedro",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
